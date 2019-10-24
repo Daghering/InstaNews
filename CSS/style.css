@@ -70,9 +70,28 @@ body {
   background: black;
   color: white;
 }
+@media (min-width: 600px) {
+  body {
+    position: absolute;
+    flex-direction: row;
+    padding-left: 0px;
+    padding-top: 150px;
+  }
+  body .display {
+    position: relative;
+    padding-left: 150px;
+    padding-bottom: 150px;
+  }
+}
 body h1 {
   text-align: center;
   padding-top: 20px;
+}
+@media (min-width: 600px) {
+  body h1 {
+    flex-direction: row;
+    padding-left: 65px;
+  }
 }
 body #my-select-menu {
   margin-top: 20px;
@@ -82,12 +101,11 @@ body footer {
   padding-top: 150px;
   color: #c2c2c2;
 }
-
-.loader {
-  height: 5px;
-  width: 5px;
+@media (min-width: 600px) {
+  body footer {
+    padding-top: 500px;
+  }
 }
-
 /*
 Components: anything reusable such as buttons, navbars, cards, etc.
 

@@ -25,6 +25,17 @@ body {
     color: white;
 
     @include tablet {
+        position: absolute;
+        flex-direction: row;
+        padding-left: 0px;
+        padding-top: 150px;
+
+     .display {
+         position: relative;
+         padding-left: 150px;
+         padding-bottom: 150px;
+
+     }
 
     }
 
@@ -36,6 +47,16 @@ body {
         text-align: center;
         padding-top: 20px;
 
+        @include tablet {
+            flex-direction: row;
+            padding-left: 65px;
+    
+        }
+    
+        @include desktop {
+    
+        }
+
     }
 
   
@@ -45,25 +66,41 @@ body {
 
         margin-left: 65px;
 
+        @include tablet {
+            
+    
+        }
+    
+        @include desktop {
+    
+        }
+
     }
 
     footer {
         padding-top: 150px;
         color: #c2c2c2;
+
+        @include tablet {
+            padding-top: 500px;
+            
+    
+        }
+    
+        @include desktop {
+    
+        }
     }
 
 
 } 
 
 
-.loader {
-    height: 5px;
-    width: 5px;
-}
+// .loader {
+//     height: 5px;
+//     width: 5px;
+// }
 
-ul {
-
-}
 
 
 

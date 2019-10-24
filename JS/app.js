@@ -1,17 +1,28 @@
+ //API
+ 
  $(function() {
-     $("button").on("click", function() {
-        $.getJSON('https://api.nytimes.com/svc/topstories/v2/science.json?api-key=YTMJtmBtB00ippV8QvL3cjmtA9aRZvIf')
+     $("select").on("change", function() {
+         $change = ($(this).val())
+        $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$change}.json?api-key=YTMJtmBtB00ippV8QvL3cjmtA9aRZvIf`)
        .done(function(data) {
+        console.log(data.results[0].multimedia[4].url)
         $.each(data.results, function(key, value) {
-            $(".posts").append(`img src="....."/>`)
-            $(".posts").append(`<li>${value}</li>`)
-              console.log(data.results)
+            console.log(value)
+            $("ul").append(`<img src="${value.multimedia[4].url}"/>`)
+            $("ul").append(`<li>${value.abstract}</li>`)
+            console.log(value.multimedia[4].url)
 
         })
     })
 
-     })
+})
 
+
+
+
+
+
+     // Menu function
      $(function() {
         $('#my-select-menu').on('change', function(event){
             const $selected = $(event.target).val()
