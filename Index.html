@@ -8,25 +8,43 @@
     <title>InstaNews</title>
 </head>
 <body>
+<header>
+     <img class="logo" alt="NY Times Logo" src="project-02/assets/images/nyt-logo.svg"/>
+     <!-- <img class="loader" src="project-02/assets/images/ajax-loader.gif"> -->
+     <div class="page-wrapper">
 
-<div class="page-wrapper">
-<h1>InstaNews</h1>
-<Section class="display">
-<button class="btn">Click</button>
-<ul class="posts">
+            <Section class="display">
+            <h1>Choose a section:</h1>
+            
+            <ul class="posts">
+                    <select id="my-select-menu">
+                            <option value=""> Sections...</option>
+                            <option value="home">Home</option>
+                            <option value="arts">Arts</option>
+                            <option value="business">Business</option>
+                            <option value="sports">Sports</option>
+                            <option value="techonology">Technology</option>
+                            <option value="fashion">Fashion</option>
+                         </select>
+            </ul>
+            </Section>
+            </div>
+     </header>
+    
 
-</ul>
-</Section>
-</div>
 
+<footer>
 
+    <p>© Copyright 2019 INSTANEWS</p>
+
+</footer>
 
 
 <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-    
+
     <script src="/JS/app.js"></script>
 </body>
 </html>

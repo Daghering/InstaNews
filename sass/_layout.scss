@@ -16,10 +16,26 @@ and an grid system
 }
 
 body {
-    background: lightgray;
+    background: black;
+    color: white;
+    
 } 
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    height: 5px;
+    width: 5px;
+}
 
 ul {
 
+}
+
+footer {
+    color: #c2c2c2;
 }
 
