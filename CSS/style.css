@@ -63,22 +63,29 @@ and an grid system
 
 */
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
   background: black;
   color: white;
 }
-
-header {
-  display: flex;
-  justify-content: center;
+body h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+body #my-select-menu {
+  margin-top: 20px;
+  margin-left: 65px;
+}
+body footer {
+  padding-top: 150px;
+  color: #c2c2c2;
 }
 
 .loader {
   height: 5px;
   width: 5px;
-}
-
-footer {
-  color: #c2c2c2;
 }
 
 /*

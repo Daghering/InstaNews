@@ -16,15 +16,45 @@ and an grid system
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    // justify-content: space-evenly;
     background: black;
     color: white;
-    
+
+    @include tablet {
+
+    }
+
+    @include desktop {
+
+    }
+
+    h1 {
+        text-align: center;
+        padding-top: 20px;
+
+    }
+
+  
+
+    #my-select-menu {
+        margin-top: 20px;
+
+        margin-left: 65px;
+
+    }
+
+    footer {
+        padding-top: 150px;
+        color: #c2c2c2;
+    }
+
+
 } 
 
-header {
-    display: flex;
-    justify-content: center;
-}
 
 .loader {
     height: 5px;
@@ -35,7 +65,56 @@ ul {
 
 }
 
-footer {
-    color: #c2c2c2;
-}
+
+
+// $font-size: 2rem;
+// $brand-color: #f563d8;
+// @mixin tablet {
+//     @media (min-width: 600px) {
+//         @content;
+//     }
+// }
+// @mixin desktop {
+//     @media (min-width: 1024px) {
+//         @content;
+//     }
+// }
+// .main-navigation{
+//     @include tablet {
+//         font-size: 3em;
+//     }
+//     font-size: $font-size;
+//     ul {
+//         font-size: $font-size;
+//         li {
+//             color: $brand-color;
+//             @include tablet {
+//                 color: black;
+//             }
+//             @include desktop {
+//                 color: white;
+//             }
+//             &:hover {
+//                 font-size:2em;
+//             }
+//         }
+//     }
+// }
+// %message {
+//     border: 3px solid;
+//     background-color: red;
+// }
+// .success {
+//     @extend %message;
+//     background-color: green;
+// }
+// body {
+//     background: purple;
+//     @include desktop {
+//         background-color: green;
+//     }
+// }
+
+
+
 
