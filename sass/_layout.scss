@@ -15,25 +15,30 @@ and an grid system
     }
 }
 
-body {
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 150px;
-    // justify-content: space-evenly;
+    justify-content: space-evenly;
     background: black;
     color: white;
+
+    h1 {
+        text-align: center;
+        padding-top: 20px;
+    }
 
     @include tablet {
         position: absolute;
         flex-direction: row;
         padding-left: 0px;
-        padding-top: 150px;
+        // padding-top: 150px;
 
      .display {
          position: relative;
-         padding-left: 150px;
-         padding-bottom: 150px;
+        //  padding-left: 150px;
+        //  padding-bottom: 150px;
 
      }
 
@@ -77,23 +82,23 @@ body {
 
     }
 
-    footer {
-        padding-top: 150px;
-        color: #c2c2c2;
+    // footer {
+    //     padding-top: 150px;
+    //     color: #c2c2c2;
 
-        @include tablet {
-            padding-top: 500px;
+    //     @include tablet {
+    //         padding-top: 500px;
             
     
-        }
+    //     }
     
-        @include desktop {
+    //     @include desktop {
     
-        }
-    }
+    //     }
+    // }
 
 
-} 
+  }
 
 
 // .loader {
