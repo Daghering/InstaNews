@@ -17,8 +17,21 @@ and an grid system
 
 body {
     background: black;
+    font-size: 16px;
+    font-family: "Open-Sans-Light";
+    color: #ffffff;
 }
 
+figure {
+
+    width: 100%   
+
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
 
 header {
     display: flex;
@@ -26,10 +39,14 @@ header {
     align-items: center;
     padding-top: 150px;
     justify-content: space-evenly;
-    color: white;
+    
 
     h1 {
         padding-top: 20px;
+
+        @include tablet {
+            
+        }
     }
 
     .posts {
@@ -42,9 +59,14 @@ header {
     @include tablet {
 
         flex-direction: row;
-        padding-right: 13px;
-        margin-left: 125px;
+        // text-align: center;
+        // padding-right: 13px;
+        // margin-left: 125px;
         padding-top: 370px;
+
+        // .logo {
+        //      padding-left: 150px;
+        //  }
 
      .display {
          
@@ -57,7 +79,11 @@ header {
     }
 
     @include desktop {
-        padding-right: 400px;
+        padding-right: 700px;
+
+        .display {
+            
+        }
         
 
     }
@@ -65,21 +91,9 @@ header {
 
      
 
-  
 
-    #my-select-menu {
-        
 
-        @include tablet {
-            
     
-        }
-    
-        @include desktop {
-    
-        }
-
-    }
 
     footer {
         display: flex;
@@ -102,7 +116,6 @@ header {
     }
 
 
-  
 
 
 // .loader {
@@ -111,6 +124,19 @@ header {
 // }
 
 
+
+
+
+// --------------------------------------------------------------------------------------------------------
+
+
+//GRID
+// img {
+//     display: grid;
+//     grid-template-columns: 100px 100px;
+//     height: 400px;
+
+// }
 
 
 // $font-size: 2rem;

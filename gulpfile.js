@@ -21,24 +21,39 @@ gulp.task("sass", function(){
     .pipe(cssnano())
     .pipe(rename("style.min.css"))
     .pipe(sourcemaps.write("../maps"))
-    .pipe(gulp.dest("./build/css'"))
+    .pipe(gulp.dest("./build/css"))
 
 })
 
 
-
-
-gulp.task("default", function() {
+gulp.task("scripts", function() {
 
     return gulp
-    .src("./JS/*.js")
+    .src("./js/*.js")
     .pipe(terser())
     .pipe(rename({extname:".min.js"}))
     .pipe(gulp.dest("./build/js"))
     }
 )
 
-// gulp.task("default", function(done) {
-//     console.log("hello I am Gulp")
-//     done()
-// })
+gulp.task("browser-sync", function(done){
+    browserSync.init ({
+        server: {
+            baseDir: './'
+        }
+    })
+
+    gulp
+        .watch(["build/css/*.css", "build/js/*.js"])
+        .on ("change", browserSync.reload)
+
+        done()
+})
+
+gulp.task("watch", function(done) {
+    gulp.watch("js/*.js", gulp.series("scripts"))
+    gulp.watch("sass/*.scss", gulp.series("sass"))
+    done()
+})
+
+gulp.task("default", gulp.parallel("browser-sync", "watch"))

@@ -50,11 +50,32 @@ Base: contained within this file are all your resets,
 variables, mixins, and any utility class.
 
 */
+@font-face {
+  font-family: "Open-Sans-Light";
+  src: url("../../fonts/OpenSans-Light.eot");
+  src: url("../../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Light.woff2") format("woff2"), url("../../fonts/OpenSans-Light.woff") format("woff"), url("../../fonts/OpenSans-Light.ttf") format("truetype"), url("../../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
 /*
 Layout: contains all the CSS that handles the layout, such as the container 
 and an grid system
 
 */
+body {
+  background: black;
+  font-size: 16px;
+  font-family: "Open-Sans-Light";
+  color: #ffffff; }
+
+figure {
+  width: 100%; }
+
+img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; }
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,35 +90,47 @@ header {
   padding-top: 150px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  background: black;
-  color: white; }
+          justify-content: space-evenly; }
   header h1 {
-    text-align: center;
     padding-top: 20px; }
+  header .posts {
+    margin-top: 15px;
+    padding-right: 17px;
+    border-radius: 4px; }
   @media (min-width: 600px) {
     header {
-      position: absolute;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      padding-left: 0px; }
+      padding-top: 370px; }
       header .display {
-        position: relative; } }
-  header h1 {
-    text-align: center;
-    padding-top: 20px; }
-    @media (min-width: 600px) {
-      header h1 {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        padding-left: 65px; } }
-  header #my-select-menu {
-    margin-top: 20px;
-    margin-left: 65px; }
+        margin-right: 250px;
+        margin-bottom: 30px; } }
+  @media (min-width: 1024px) {
+    header {
+      padding-right: 700px; } }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 160px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: black;
+  color: #c2c2c2; }
+  @media (min-width: 600px) {
+    footer {
+      padding-top: 350px; } }
 
 /*
 Components: anything reusable such as buttons, navbars, cards, etc.
