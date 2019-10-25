@@ -15,90 +15,105 @@ and an grid system
     }
 }
 
+body {
+    background: black;
+}
+
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 150px;
     justify-content: space-evenly;
-    background: black;
     color: white;
 
     h1 {
-        text-align: center;
         padding-top: 20px;
     }
 
+    .posts {
+        margin-top: 15px;
+        padding-right: 17px;
+        border-radius: 4px;
+
+    }
+
     @include tablet {
-        position: absolute;
+        // position: absolute;
         flex-direction: row;
-        padding-left: 0px;
-        // padding-top: 150px;
+       
+        // padding-left: 0px;
+        padding-top: 700px;
 
      .display {
-         position: relative;
-        //  padding-left: 150px;
-        //  padding-bottom: 150px;
+         
+        margin-right: 250px;
+        margin-bottom: 30px;
+        
 
      }
 
     }
 
-    @include desktop {
+    // @include desktop {
 
-    }
+    // }
 
-    h1 {
-        text-align: center;
-        padding-top: 20px;
-
-        @include tablet {
-            flex-direction: row;
-            padding-left: 65px;
-    
-        }
-    
-        @include desktop {
-    
-        }
-
-    }
-
-  
-
-    #my-select-menu {
-        margin-top: 20px;
-
-        margin-left: 65px;
-
-        @include tablet {
-            
-    
-        }
-    
-        @include desktop {
-    
-        }
-
-    }
-
-    // footer {
-    //     padding-top: 150px;
-    //     color: #c2c2c2;
+    // h1 {
+    //     text-align: center;
+    //     padding-top: 20px;
 
     //     @include tablet {
-    //         padding-top: 500px;
-            
+    //         flex-direction: row;
+    //         padding-left: 65px;
     
     //     }
     
     //     @include desktop {
     
-    //     }
-    // }
+        }
+
+     
+
+  
+
+    #my-select-menu {
+        
+
+        @include tablet {
+            
+    
+        }
+    
+        @include desktop {
+    
+        }
+
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 160px;
+        justify-content: space-evenly;
+        background: black;
+        color: #c2c2c2;
+
+        @include tablet {
+            // padding-top: 500px;
+            
+    
+        }
+    
+        @include desktop {
+    
+        }
+    }
 
 
-  }
+  
 
 
 // .loader {

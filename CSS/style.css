@@ -57,55 +57,71 @@ Base: contained within this file are all your resets,
 variables, mixins, and any utility class.
 
 */
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("OpenSans-Light.eot");
+  src: url("OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("OpenSans-Light.woff2") format("woff2"), url("OpenSans-Light.woff") format("woff"), url("OpenSans-Light.ttf") format("truetype"), url("OpenSans-Light.svg#OpenSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("OpenSans-Bold.eot");
+  src: url("OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("OpenSans-Bold.woff2") format("woff2"), url("OpenSans-Bold.woff") format("woff"), url("OpenSans-Bold.ttf") format("truetype"), url("OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans Bold Italic";
+  src: url("OpenSans-BoldItalic.eot");
+  src: url("OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("OpenSans-BoldItalic.woff2") format("woff2"), url("OpenSans-BoldItalic.woff") format("woff"), url("OpenSans-BoldItalic.ttf") format("truetype"), url("OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
 /*
 Layout: contains all the CSS that handles the layout, such as the container 
 and an grid system
 
 */
 body {
+  background: black;
+}
+
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 150px;
   justify-content: space-evenly;
-  background: black;
   color: white;
 }
-@media (min-width: 600px) {
-  body {
-    position: absolute;
-    flex-direction: row;
-    padding-left: 0px;
-    padding-top: 150px;
-  }
-  body .display {
-    position: relative;
-    padding-left: 150px;
-    padding-bottom: 150px;
-  }
-}
-body h1 {
-  text-align: center;
+header h1 {
   padding-top: 20px;
 }
+header .posts {
+  margin-top: 15px;
+  padding-right: 17px;
+  border-radius: 4px;
+}
 @media (min-width: 600px) {
-  body h1 {
+  header {
     flex-direction: row;
-    padding-left: 65px;
+    padding-top: 700px;
+  }
+  header .display {
+    margin-right: 250px;
+    margin-bottom: 30px;
   }
 }
-body #my-select-menu {
-  margin-top: 20px;
-  margin-left: 65px;
-}
-body footer {
-  padding-top: 150px;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 160px;
+  justify-content: space-evenly;
+  background: black;
   color: #c2c2c2;
-}
-@media (min-width: 600px) {
-  body footer {
-    padding-top: 500px;
-  }
 }
 /*
 Components: anything reusable such as buttons, navbars, cards, etc.
