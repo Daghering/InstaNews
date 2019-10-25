@@ -40,11 +40,11 @@ header {
     }
 
     @include tablet {
-        // position: absolute;
+
         flex-direction: row;
-       
-        // padding-left: 0px;
-        padding-top: 700px;
+        padding-right: 13px;
+        margin-left: 125px;
+        padding-top: 370px;
 
      .display {
          
@@ -56,22 +56,11 @@ header {
 
     }
 
-    // @include desktop {
+    @include desktop {
+        padding-right: 400px;
+        
 
-    // }
-
-    // h1 {
-    //     text-align: center;
-    //     padding-top: 20px;
-
-    //     @include tablet {
-    //         flex-direction: row;
-    //         padding-left: 65px;
-    
-    //     }
-    
-    //     @include desktop {
-    
+    }
         }
 
      
@@ -102,8 +91,8 @@ header {
         color: #c2c2c2;
 
         @include tablet {
-            // padding-top: 500px;
-            
+            // margin-bottom: 10px;
+            padding-top: 350px;
     
         }
     
