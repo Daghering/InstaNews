@@ -100,6 +100,7 @@ figure {
   width: 100%; }
 
 img {
+  position: relative;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain; }
@@ -131,7 +132,12 @@ img {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
   .page-wrapper li {
-    list-style: none; }
+    position: absolute;
+    list-style: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25)));
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+    background-size: cover;
+    z-index: 9999; }
   .page-wrapper h1 {
     padding-top: 12px; }
   .page-wrapper .posts {
@@ -139,6 +145,8 @@ img {
     border-radius: 4px; }
   .page-wrapper select {
     width: 120px; }
+    .page-wrapper select:hover {
+      border-style: solid blue; }
   @media (min-width: 600px) {
     .page-wrapper {
       padding-top: 380px; } }

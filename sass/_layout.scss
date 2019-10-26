@@ -47,8 +47,11 @@ figure {
 }
 
 img {
+    position: relative;
     width: 100%;
     object-fit: contain;
+    // background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+    // background-size: cover;
 }
 
 .main {
@@ -86,7 +89,12 @@ img {
     justify-content: space-around;
 
     li {
+        position:absolute;
         list-style: none;
+        background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+        background-size: cover;
+        z-index: 9999;
+        
     }
 
     h1{
@@ -100,6 +108,11 @@ img {
 
     select {
         width: 120px;
+
+        &:hover {
+            border-style: solid blue;
+           
+        }
     }
 
     @include tablet {
