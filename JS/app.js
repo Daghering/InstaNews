@@ -1,7 +1,9 @@
  //API
  $(function() {
+    $(".loader").hide();
      $("select").on("change", function() {
         $(".main").empty();
+        $(".loader").show();
          $change = ($(this).val())
         $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$change}.json?api-key=YTMJtmBtB00ippV8QvL3cjmtA9aRZvIf`)
        .done(function(data) {
@@ -13,10 +15,12 @@
 
             if (value.multimedia.length !== 0 && counter < 12) {
                 counter ++;
+                $(".loader").hide();
                 $(".main").append(`<img src="${value.multimedia[4].url}"/>`)
                 $(".main").append(`<li>${value.abstract}</li>`) 
                 
                 return counter < 12
+                
 
                
             }
