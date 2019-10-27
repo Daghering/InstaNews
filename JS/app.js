@@ -1,6 +1,7 @@
  //API
  $(function() {
      $("select").on("change", function() {
+        $(".main").empty();
          $change = ($(this).val())
         $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$change}.json?api-key=YTMJtmBtB00ippV8QvL3cjmtA9aRZvIf`)
        .done(function(data) {
