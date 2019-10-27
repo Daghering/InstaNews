@@ -24,13 +24,16 @@
             
             console.log(value)
 
-            //only show 12
+    
             
 
         })
         
 
     })
+
+    // $('#body').css('min-height', '100%');
+    // $('#body').css('min-height', screen.height);
 
 })
 
