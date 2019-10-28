@@ -100,7 +100,10 @@ header {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; } }
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   @media (min-width: 1024px) {
     header {
       -webkit-box-pack: start;
@@ -131,38 +134,54 @@ header {
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
+  .page-wrapper h1 {
+    padding-top: 12px; }
+    @media (min-width: 600px) {
+      .page-wrapper h1 {
+        padding-top: 140px; } }
+  .page-wrapper .posts {
+    margin-top: 18px;
+    border-radius: 4px; }
   .page-wrapper select {
     width: 120px; }
 
+ul {
+  display: grid;
+  grid-template-columns: repeat 1, 1fr; }
+  @media (min-width: 600px) {
+    ul {
+      height: auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 33vw 33vw 33vw;
+      grid-template-rows: auto auto auto auto; } }
+  @media (min-width: 1024px) {
+    ul {
+      height: auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 25vw 25vw 25vw 25vw; } }
+
 .main {
   width: 100%; }
-  .main figure {
-    display: grid;
-    grid-template-columns: repeat 1, 1fr;
+  .main li {
     width: 100%;
     position: relative;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
     list-style: none;
     overflow: hidden; }
-    @media (min-width: 600px) {
-      .main figure {
-        height: auto;
-        width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr); } }
-    @media (min-width: 1024px) {
-      .main figure {
-        display: grid;
-        height: auto;
-        width: 100%;
-        grid-template-columns: repeat 4, 1fr;
-        grid-template-rows: repeat(4, 1fr); } }
   .main img {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+    @media (min-width: 600px) {
+      .main img {
+        height: 50vw; } }
+    @media (min-width: 1024px) {
+      .main img {
+        height: 25vw; } }
   .main p {
     bottom: 0em;
     height: auto;
@@ -185,15 +204,8 @@ header {
             box-sizing: border-box; }
   .main:hover p {
     padding: 10px 10px;
-    -webkit-transform: translateY(-1%);
-            transform: translateY(-1%); }
-
-h1 {
-  padding-top: 12px; }
-
-.posts {
-  margin-top: 18px;
-  border-radius: 4px; }
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
 
 footer {
   display: -webkit-box;

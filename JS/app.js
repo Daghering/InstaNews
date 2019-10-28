@@ -1,10 +1,10 @@
  //API
 
  $(document).ready(function(){
-    $(".loader").hide();
+    // $(".loader").hide();
     $(".posts").on("change", function(event){
-        $(".main").empty();
-        $(".loader").hide();
+        $("ul").empty();
+        $(".loader").show();
         $change = ($(this).val())
        $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$change}.json?api-key=YTMJtmBtB00ippV8QvL3cjmtA9aRZvIf`)
       .done(function(data) {
@@ -22,19 +22,27 @@
            $.each(multimedia, (key,value) =>{
                 if (value.format === 'superJumbo') {
                     let imageURL = value.url;
-                    let listItem = `<figure style = "height:100vh"><a href = "${articleURL}" target="_blank">
-                    <img src = "${imageURL}"><p>${description}</p></a></figure>`;
-                    $(".main").append(listItem);
+                    let listItem = `<li><a href = "${articleURL}" target="_blank">
+                    <img src = "${imageURL}"><p>${description}</p></a></li>`;
+                    
+                    $("ul").append(listItem);
+                    // $('.loader').hide();
+                   
+                    
                 }
                 else {
                     return
                 }
+               
            })
                 counter++;
-                return (counter !== 12)
+               
+                return (counter !== 12);
+               
+               
     })
     
-    $('#loader').hide();
+    
  })
  })
  })
