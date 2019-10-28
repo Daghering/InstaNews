@@ -62,18 +62,28 @@ Layout: contains all the CSS that handles the layout, such as the container
 and an grid system
 
 */
+html {
+  height: 100vh; }
+
 body {
   background: black;
   font-size: 16px;
   font-family: "Open-Sans-Light";
   color: #ffffff;
   width: 100%; }
+  body .loader {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+    padding-top: 50px; }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -82,9 +92,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   @media (min-width: 600px) {
     header {
       -webkit-box-orient: horizontal;
@@ -97,60 +107,20 @@ header {
           -ms-flex-pack: start;
               justify-content: flex-start; } }
 
-@media (min-width: 600px) {
-  .logo {
-    height: 30%;
-    width: 30%; } }
-
-@media (min-width: 1024px) {
-  .logo {
-    height: 30%;
-    width: 30%; } }
+.logo {
+  height: 200px;
+  width: 200px;
+  padding-top: 150px; }
+  @media (min-width: 600px) {
+    .logo {
+      height: 30%;
+      width: 30%; } }
+  @media (min-width: 1024px) {
+    .logo {
+      height: 30%;
+      width: 30%; } }
 
 .page-wrapper {
-  text-align: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  .page-wrapper figure {
-    width: 100%; }
-    .page-wrapper figure img {
-      position: relative;
-      width: 100%;
-      -o-object-fit: contain;
-         object-fit: contain; }
-    .page-wrapper figure li {
-      position: absolute;
-      list-style: none;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-      background-size: cover;
-      z-index: 9999;
-      padding: 8px;
-      text-align: left;
-      line-height: 1.5em; }
-    @media (min-width: 600px) {
-      .page-wrapper figure {
-        display: grid;
-        height: auto;
-        width: 100%;
-        grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 1024px) {
-      .page-wrapper figure {
-        display: grid;
-        height: auto;
-        width: 100%;
-        grid-template-columns: repeat 4, 1fr; } }
-  .page-wrapper h1 {
-    padding-top: 12px; }
-  .page-wrapper .posts {
-    margin-top: 18px;
-    border-radius: 4px; }
-  .page-wrapper select {
-    width: 120px; }
-    .page-wrapper select:hover {
-      border-style: solid blue; }
-
-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,24 +128,93 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .page-wrapper select {
+    width: 120px; }
+
+.main {
+  width: 100%; }
+  .main img {
+    height: auto;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .main figure {
+    display: grid;
+    grid-template-columns: auto; }
+    .main figure li {
+      width: 100%;
+      position: relative;
+      -webkit-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in;
+      list-style: none;
+      overflow: hidden; }
+      .main figure li p {
+        height: auto;
+        margin: 0;
+        padding: 10px;
+        text-align: left;
+        line-height: 1.5em;
+        position: absolute;
+        margin-top: auto;
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+        width: 100%;
+        color: white;
+        font-size: 16px;
+        font-family: "Open Sans Light";
+        background: rgba(0, 0, 0, 0.7);
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; }
+      .main figure li:hover p {
+        padding: 10px 10px;
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%); }
+  @media (min-width: 600px) {
+    .main {
+      display: grid;
+      height: auto;
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr); } }
+  @media (min-width: 1024px) {
+    .main {
+      display: grid;
+      height: auto;
+      width: 100%;
+      grid-template-columns: repeat 4, 1fr;
+      grid-template-rows: repeat(4, 1fr); } }
+  .main h1 {
+    padding-top: 12px; }
+  .main .posts {
+    margin-top: 18px;
+    border-radius: 4px; }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 35px;
   color: #c2c2c2; }
+  footer p {
+    text-align: center; }
   @media (min-width: 1024px) {
     footer {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; } }
-
-.loader {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: center;
-  padding-top: 50px; }
 
 /*
 Components: anything reusable such as buttons, navbars, cards, etc.
