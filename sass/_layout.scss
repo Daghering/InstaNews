@@ -55,7 +55,7 @@ body {
     // margin-top: 200px;
 
     @include tablet {
-        flex-direction: row;
+        flex-direction: row;  
     }
 
     @include desktop {
@@ -96,11 +96,6 @@ body {
     
     select {
         width: 120px;
-
-        &:hover {
-            // border-style: solid blue;
-           
-        }
     }
 }
 
@@ -108,66 +103,72 @@ body {
                 width: 100%;
                 // height: 50vh;
 
-                img {
-                    height: auto;
-                    width: 100%;
-                    object-fit: cover;
-            }
-
+           
                 figure {
                     display: grid;
-                    grid-template-columns: auto;
-                    
-
-                li {
+                    grid-template-columns: repeat (1, 1fr);
                     width: 100%;
                     position: relative;
                     transition:all 0.5s ease-in;
                     list-style: none;
                     overflow: hidden;
+
+                    @include tablet {
+            
+                        height: auto;
+                        width: 100%;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                        
+                    }
+                
+                    @include desktop {
+                        display: grid;height: auto;
+                        width: 100%;
+                        grid-template-columns: repeat (4, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                    }
+                }
+                
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+            }
+
                 
             p {
+                
+                bottom:0em;
                     height: auto;
                     margin: 0;
-                    padding: 10px;
+                    // padding: 10px;
                     text-align: left;
                     line-height: 1.5em;
                     position: absolute;
                     margin-top: auto;
-                    transform: translateY(100%);
                     width: 100%;
                     color: white;
                     font-size: 16px;
+                    z-index: 9999;
                     font-family: "Open Sans Light";
-                    background: rgba(0,0,0 , 0.7);
+                    background: rgba(0,0,0 , 0.5);
+                    transform: translateY(100%);
                     transition: 0.5s ease-in-out;
                     box-sizing: border-box;
             }
+
             &:hover p {
                     padding: 10px 10px;
-                    transform: translateY(-100%);
+                    transform: translateY(-1%);
             }
 
-        }
-    }      
+        
+     
 
-
-        @include tablet {
-            display: grid;
-            height: auto;
-            width: 100%;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            
-        }
-    
-        @include desktop {
-            display: grid;
-            height: auto;
-            width: 100%;
-            grid-template-columns: repeat (4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-        }
+            }
+       
     
     
 
@@ -180,18 +181,9 @@ body {
         border-radius: 4px;
     }
 
-   
 
-    @include tablet {
-        // padding-top: 250px;
-    }
 
-    @include desktop {
-        // margin-left: 60px;
-        // padding-top: 300px;
-    }
 
-}
 
 //footer
  footer {

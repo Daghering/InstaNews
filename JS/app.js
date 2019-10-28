@@ -22,7 +22,7 @@
            $.each(multimedia, (key,value) =>{
                 if (value.format === 'superJumbo') {
                     let imageURL = value.url;
-                    let listItem = `<figure style = "height:50vh"><a href = "${articleURL}" target="_blank">
+                    let listItem = `<figure style = "height:100vh"><a href = "${articleURL}" target="_blank">
                     <img src = "${imageURL}"><p>${description}</p></a></figure>`;
                     $(".main").append(listItem);
                 }
