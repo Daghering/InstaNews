@@ -227,6 +227,7 @@ footer {
   left: 0;
   bottom: 0;
   padding-bottom: 40px;
+  padding-top: 15px;
   width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
