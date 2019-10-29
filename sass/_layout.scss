@@ -27,13 +27,13 @@ body {
   width: 100%;
 
   .loader {
+    display:flex;  
+    flex-direction: row;
     position: relative;
     height: 50px;
     width: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: center;
-    padding-top: 50px;
+    padding-top:8px;
+    margin: auto;
   }
 
   @include tablet {
@@ -104,7 +104,7 @@ header {
 }
 
 ul 
-{ display: grid;
+{display: grid;
  grid-template-columns: repeat (1, 1fr);
 
     @include tablet {
@@ -161,7 +161,7 @@ ul
     bottom: 0em;
     height: auto;
     margin: 0;
-    // padding: 10px;
+    padding: 10px;
     text-align: left;
     line-height: 1.5em;
     position: absolute;
@@ -170,10 +170,10 @@ ul
     color: white;
     font-size: 16px;
     z-index: 9999;
-    font-family: "Open Sans Light";
+    font-family: "Open-Sans-Light";
     background: rgba(0, 0, 0, 0.5);
     transform: translateY(100%);
-    transition: 0.5s ease-in-out;
+    transition: 0.8s ease-in-out;
     box-sizing: border-box;
   }
 

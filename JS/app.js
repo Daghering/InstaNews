@@ -1,7 +1,7 @@
  //API
 
  $(document).ready(function(){
-    // $(".loader").hide();
+    $(".loader").hide();
     $(".posts").on("change", function(event){
         $("ul").empty();
         $(".loader").show();
@@ -26,7 +26,7 @@
                     <img src = "${imageURL}"><p>${description}</p></a></li>`;
                     
                     $("ul").append(listItem);
-                    // $('.loader').hide();
+                    $(".loader").hide();
                    
                     
                 }
