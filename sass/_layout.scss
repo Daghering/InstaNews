@@ -174,8 +174,8 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  padding-bottom: 40px;
-  padding-top: 15px;
+  margin-bottom: 40px;
+  margin-top: 25px;
   width: 100%;
   flex-direction: row;
   justify-content: center;
@@ -186,12 +186,15 @@ footer {
   }
 
   @include tablet {
-    padding-top: 10px;
+    margin-bottom: 35px;
+    margin-top: 35px;
   }
 
   @include desktop {
     align-items: flex-start;
     width: 30%;
-    padding-top: 10px;
+    // margin-right: -70px;
+    // margin-bottom: 40px;
+    // margin-top: 40px;
   }
 }
