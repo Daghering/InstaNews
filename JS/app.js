@@ -3,7 +3,7 @@
 $(function() {
     $("#my-select-menu").on("change", function(event) {
       const $selected = $(event.target).val();
-      console.log(`You have selected ${$selected}`);
+     // console.log(`You have selected ${$selected}`); Debugging
     });
   });
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
       let counter = 0;
 
       $.each(data.results, function(key, value) {
-        console.log(value);
+        // console.log(value); Debugging
         let multimedia = value.multimedia;
         if (multimedia.length === 0) {
           return;
