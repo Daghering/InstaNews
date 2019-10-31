@@ -5,12 +5,11 @@ A one-page, responsive website that allows a user to filter top news story categ
 
 ## Technologies Used
 
-HTML, CSS, and Javascript. 
+HTML, CSS/SASS, and Javascript/jQuery. 
+
  
 ## Personal Learnings
-This project proved more difficult than I thought it would be. I learned how to pull an API using JSON and have it dynamically change depending on the search result. I also learned about grid which was pretty cool. 
-
-
+During this project I learned how to pull an API using JSON and have it dynamically change depending on the search result. I also learned about grid and how to implement it in place of flex. My jQuery skills have improved as well and I learned how to inject css and html using it. Overall, this project made me a much better web developer.
 
 
 ### Author
@@ -21,15 +20,6 @@ Jawes Dagher -github.com/Daghering
 ## Setup
 
 Ensure you have [Node.js](https://nodejs.org/en/) installed first.
-
-**Install dependencies:**
-
-
-
-
-## Deploy
-
-
 
 
 ### Awknowledgments
